@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <Target Name="ILRepacker" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+        <ItemGroup>
+          <InputAssemblies Include="$(OutputPath)$(TargetName)$(TargetExt)"/>
+          <InputAssemblies Include="$(OutputPath)*.dll" Exclude="$(OutputPath)$(TargetName).dll"/>
+        </ItemGroup>
+
+        <ILRepack
+            AllowDuplicateResources="false"
+            DebugInfo="false"
+            Internalize="true"
+            InputAssemblies="@(InputAssemblies)"
+            OutputFile="$(TargetPath)"
+            Parallel="true"
+            TargetKind="WinExe" />
+    </Target>
+</Project>

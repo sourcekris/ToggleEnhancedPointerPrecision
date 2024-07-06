@@ -1,15 +1,8 @@
 
-using System;
 using System.Reactive.Linq;
-using System.Threading;
-using System.Windows.Forms;
 using GlobalHotKeys.Native.Types;
 using GlobalHotKeys;
 using System.Runtime.InteropServices;
-using System.Globalization;
-using System.Reactive;
-using System.Security.Policy;
-using Microsoft.VisualBasic.Devices;
 
 namespace ToggleEnhancedPointerPrecision
 {

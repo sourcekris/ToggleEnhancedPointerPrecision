@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace ToggleEnhancedPointerPrecision
+﻿namespace ToggleEnhancedPointerPrecision
 {
     partial class Form1
     {
